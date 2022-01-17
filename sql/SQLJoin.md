@@ -25,7 +25,7 @@ Query OK, 0 rows affected (0.013 sec)
 
 <br>
 
-<img src="./SQL_Join_Photo.png">
+<img src="./SQLJoinPhoto.png">
 
 <br>
 
