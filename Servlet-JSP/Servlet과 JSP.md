@@ -3,7 +3,7 @@
 
 ```
 Web Server <-Data I/O-> Application Server <-call/return-> Java Application
-Web Server <-> Servlet Container <-> Serlvet
+Web Server <-Data I/O-> Servlet Container  <-call/return-> Serlvet
 ```
 
 - 애플리케이션 서버와 자바 애플리케이션을 만드는 표준화된 기술<br>
