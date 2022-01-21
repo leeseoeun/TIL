@@ -9,6 +9,8 @@
 plugins {
     // Apply the application plugin to add support for building a CLI application in Java.
     id 'application'
+    // id 'eclipse'
+    id 'eclipse-wtp'
 }
 
 repositories {
@@ -17,6 +19,11 @@ repositories {
 }
 
 dependencies {
+    // 서블릿 API
+    // - 서블릿 컨테이너에 있는 라이브러리다. 따라서 배포할 때 제외해야 한다.
+    // - 프로그램을 개발하는 동안 컴파일 할 때 사용해야 하기 때문에 providedCompile로 설정한다.
+    compileOnly 'javax.servlet:javax.servlet-api:4.0.1'
+      
     // Use JUnit test framework.
     testImplementation 'junit:junit:4.13.2'
 
@@ -27,4 +34,10 @@ dependencies {
 application {
     // Define the main class for the application.
     mainClass = 'TIL.App'
+}
+
+eclipse {
+    project {
+        name = "servlet"
+    }
 }

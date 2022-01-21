@@ -6,4 +6,4 @@
 ||[INNER JOIN](./sql/INNER.md)|
 ||[FULL OUTER JOIN](./sql/FULLOUTER.md)|
 ||[EXCULUSIVE JOIN](./sql/EXCULUSIVE.md)|
-|[*servlet*]()||
+|[*servlet*](./Servlet-JSP)|eomcs-servlet|
