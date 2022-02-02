@@ -7,4 +7,4 @@
 ||[INNER JOIN](./sql/InnerJoin.md)|
 ||[FULL OUTER JOIN](./sql/FullOuterJoin.md)|
 ||[EXCULUSIVE JOIN](./sql/ExculusiveJoin.md)|
-|[*Servlet-JSP*](./Servlet-JSP)|eomcs-servlet|
+|[*Servlet*](./Servlet)|eomcs-servlet|
