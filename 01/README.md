@@ -70,7 +70,7 @@ plugins {
 
 eclipse {
     project {
-        name = "baekjoon"
+        name = "TIL"
     }
 }
 ```
