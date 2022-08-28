@@ -16,6 +16,8 @@
 
 <br>
 
+*console*
+
 ```console
 [~]$ mkdir TIL
 [~]$ cd TIL
@@ -54,4 +56,30 @@ Enter selection (default: JUnit 4) [1..4] 1
 
 Project name (default: TIL): (엔터: 현재 디렉토리명을 프로젝트 이름으로 사용)
 Source package (default: TIL): 기본 자바 패키지 설정
+```
+
+<br>
+
+*builde.gradle*
+
+```
+plugins {
+    // Apply the application plugin to add support for building a CLI application in Java.
+    id 'eclipse'
+}
+
+eclipse {
+    project {
+        name = "baekjoon"
+    }
+}
+```
+
+<br>
+
+*console*
+
+```console
+[~/TIL/app]$ gradle eclipse
+[~/TIL/app]$ gradle cleanEclipse
 ```
