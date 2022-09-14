@@ -29,9 +29,9 @@ export class AppComponent {
 
 *app.component.html*
 ```javascript
+// {{변수명}} : 데이터 템플릿팅
 <div>
   <h1>Hello World!</h1>
-  // {{변수명}} : 데이터 템플릿팅
   <p>My name is {{myName}}</p>
 </div>
 ```
