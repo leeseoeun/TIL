@@ -9,7 +9,7 @@
 
 *visual studio code*
 ```
-[~/Desktop/hello-vue]$ npm run serve
+[~/Desktop/hello-vue]> npm run serve
 ```
 
 *App.vue*

@@ -9,7 +9,7 @@
 
 *visual studio code*
 ```
-[~/Desktop/hello-angular]$ npm start
+[~/Desktop/hello-angular]> npm start
 ```
 
 *app.module.ts*
@@ -41,4 +41,20 @@ export class AppComponent {
 h1 {
     color: blueviolet;
 }
+```
+
+<br>
+
+  - 컴포넌트 생성<br>
+
+*console*
+```
+[~/Desktop/hello-angular]$ ng generate component new-component
+[~/Desktop/hello-angular]$ ng g c new-component
+```
+
+*visual studio code*
+```
+[~/Desktop/hello-angular]> ng generate component new-component
+[~/Desktop/hello-angular]> ng g c new-component
 ```
