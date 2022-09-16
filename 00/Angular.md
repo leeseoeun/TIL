@@ -46,15 +46,31 @@ h1 {
 <br>
 
   - 컴포넌트 생성<br>
+    - 계층적으로 컴포넌트 생성<br>
+    ng generate component 컴포넌트/생성할컴포넌트
 
 *console*
 ```
-[~/Desktop/hello-angular]$ ng generate component new-component
-[~/Desktop/hello-angular]$ ng g c new-component
+[~/Desktop/hello-angular]$ ng generate component new-component-name
+[~/Desktop/hello-angular]$ ng g c new-component-name
 ```
 
 *visual studio code*
 ```
 [~/Desktop/hello-angular]> ng generate component new-component
 [~/Desktop/hello-angular]> ng g c new-component
+```
+
+<br>
+
+  - 빌드<br>
+
+*console*
+```
+[~/Desktop/hello-angular]$ npm run build
+```
+
+*visual studio code*
+```
+[~/Desktop/hello-angular]> npm run build
 ```

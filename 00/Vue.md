@@ -37,3 +37,31 @@ export default {
 <style>
 </style>
 ```
+
+<br>
+
+  - 빌드<br>
+
+*console*
+```
+[~/Desktop/hello-vue]$ npm run build
+```
+
+*visual studio code*
+```
+[~/Desktop/hello-vue]> npm run build
+```
+
+<br>
+
+  - vuex 추가<br>
+
+*console*
+```
+[~/Desktop/hello-vue]$ vue add vuex
+```
+
+*visual studio code*
+```
+[~/Desktop/hello-vue]> vue add vuex
+```

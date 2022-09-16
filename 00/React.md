@@ -43,3 +43,17 @@ function App() {
 
 export default App;
 ```
+
+<br>
+
+  - 빌드<br>
+
+*console*
+```
+[~/Desktop/hello-react]$ npm run build
+```
+
+*visual studio code*
+```
+[~/Desktop/hello-react]> npm run build
+```
