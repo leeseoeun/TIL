@@ -355,7 +355,7 @@ where ( select
 |-|-|-|
 |<b>drop</b>|건물 철거<br>(구조 삭제)||
 |<b>truncate</b>|입주민 퇴거<br>(구조가 남음)|auto commit<br>rollback 불가능|
-|<b>delte</b>||유저 commit<br>rollback 가능|
+|<b>delete</b>||유저 commit<br>rollback 가능|
 
 <br>
 
