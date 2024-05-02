@@ -1,7 +1,7 @@
 |TIL||
 |:---:|---|
 |[*programmers*](https://github.com/leeseoeun/programmers.git)||
-|[*01*](./01/README.md)|프로젝트 준비하기|
+|[*01*](./01)|[프로젝트 준비하기](./01/README.md)<br>[build.gradle](./01/02._build.gradle.md)|
 |[*Servlet*](./Servlet)|eomcs-servlet|
 |[*Spring*](./Spring)|eomcs-spring-webmvc|
 |[*SQL*](./SQL)|[SQL Join](./SQL/SQLJoin.md)<br>[SQLD](./SQL/SQLD.md)|
