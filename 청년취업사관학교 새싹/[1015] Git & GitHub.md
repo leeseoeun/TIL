@@ -223,8 +223,6 @@
         [깃 커밋 반영]
         ```
 
-<!--
-
 <br><br>
 
 ## 브랜치 생성
@@ -261,8 +259,7 @@
 
 - 작업 브랜치 변경
     - ```java
-        // 작업 브랜치를 main 브랜치로 변경
-        git checkout main
+        git checkout "브랜치 이름"
         ```
 
 <br>
@@ -276,7 +273,7 @@
 
 - 지역 저장소 브랜치를 원격 저장소에 반영
     - ```java
-        // 새로운 로컬 브랜치를 원격 저장소에 푸시하여, 원격에도 해당 브랜치를 생성
+        // 새로운 로컬 브랜치를 원격 저장소에 푸시 하여, 원격에도 해당 브랜치를 생성
         git push origin "브랜치 이름"
         ```
 
@@ -297,6 +294,188 @@
 
 <br>
 
-- 
+- 빨리감기 병합
+    - ```java
+        // fast-forward 브랜치에서 변경 파일 추가 및 커밋 후
+        // main 브랜치를 작업 브랜치로 변경
+        git branch test/fast-forward
+        git checkout test/fast-forward
+        
+        git add .
+        git commit -m "Chang title"
+        
+        git checkout main
 
--->
+        // fast-forward 브랜치를 main 브랜치에 병합
+        git merge test/fast-forward
+        ```
+
+<br><br>
+
+## 풀 리퀘스트 요청
+
+<br>
+
+- 풀 리퀘스트의 필요성
+    - 여러 개발자가 함께 작업할 때 중요
+    - 변경 내역이 프로젝트에 미치는 영향 확인 필요
+
+<br>
+
+- 풀 리퀘스트의 목적
+    - 동료들에게 변경 내역 검토 요청
+    - 기준 브랜치에 병합하기 전 피드백 수집
+
+<br>
+
+- GitHub의 지원
+    - 풀 리퀘스트 기능 제공
+    - 브랜치 병합 전 변경 내역 공유 및 검토 가능
+
+<br>
+
+<hr>
+
+<br>
+
+- 요청
+    1. Pull requests
+    2. New pull request
+    3. base: "브랜치", compare: "브랜치" 선택
+    4. 변경 내역 확인 후 Create pull request
+    5. 풀 리퀘스트 내용 작성 후 Create pull request
+- 검토
+    1. Pull requests
+    2. Review changes
+    3. Submit review
+- 병합
+    - Merge pull request
+    - Confirm merge
+- 반영
+    - git pull "원격 저장소 식별자" "원격 저장소 브랜치"
+        - `git pull origin main`
+
+<br><br>
+
+## 협업 규칙
+
+<br>
+
+- 커밋 단위
+    - 커밋의 최소 단위 유지
+        - 큰 변경사항은 여러 개의 작은 커밋으로 나누기
+        - 각 커밋은 atomic(원자적)하게 유지
+    - 하나의 커밋에는 하나의 의도만 포함
+        - 여러 파일을 수정하더라도 단일 목적 유지
+        - 버그 수정이나 새 기능 추가 등 한 가지 의도로 제한
+    - 단일 파일 수정 시에도 목적 분리
+        - 하나의 파일에서 여러 변경사항 발생 시 커밋 분리
+        - 버그 수정과 새 기능 추가를 별도의 커밋으로 구분
+
+<br>
+
+<hr>
+
+<br>
+
+- 커밋 메시지 작성
+    - ```java
+        "category" - "simple message"
+        "detailed description"
+        ```
+        - |이름|설명|
+            |-|-|
+            |fix|잘못된 부분 수정|
+            |add|기능 추가|
+            |mod|코드 수정|
+            |rm|기능 삭제|
+    - ```java
+        "type" : "message" ("issue number")
+        ```
+        - |이름|설명|
+            |-|-|
+            |fear|기능 추가|
+            |fix|버그 수정|
+            |docs|문서/주석 관련 작업|
+            |refactor|리팩토링|
+            |test|테스트 관련 작업|
+            |chore|기타 작업|
+
+<br>
+
+<hr>
+
+<br>
+
+- 브랜치 이름 작성
+    - ```java
+        // new/feat-foo
+        // new/fear-bar
+        // bug/critical-thing
+        // test/awesome-new-library
+        "이름"/"..."
+        ```
+        - |이름|설명|
+            |-|-|
+            |new|새 기능 추가가 목적인 브랜치|
+            |test|무언가를 테스트하는 브랜치<br>(새 라이브러리, 배포 환경, 실험 등)|
+            |bug|버그 수정이 목적인 브랜치|
+
+<br>
+
+<hr>
+
+<br>
+
+- 버전 이름 작성 (버전 x.y.z)
+    - x (Major 버전)
+        - 기존 버전과 호환되지 않는 API 변경 시 증가
+        - 대규모 리팩토링이나 아키텍처 변경 시 사용
+    - y (Minor 버전)
+        - 기존 버전과 호환되는 새로운 기능 추가 시 증가
+        - 기존 기능에 대한 개선이나 확장 시 사용
+    - z (Patch 버전)
+        - 기존 버전과 호환되는 버그 수정 시 증가
+        - 성능 개선이나 내부 구현 변경 등 사용자에게 영향이 없는 변경 시 사용
+
+<br><br>
+
+## 커밋 이력 조작
+
+<br>
+
+- `git cherry-pick`
+    - 특정 상황에서 선택적 커밋 적용
+        - 전체 브랜치 병합 대신 필요한 커밋만 선택
+        - 작업 브랜치에 특정 커밋 추가 가능
+    - 주요 사용 사례
+        - 긴급 버그 수정 : 치명적 결함 수정 커밋만 운영 브랜치에 적용
+        - 잘못된 브랜치 작업 정정 : 의도한 브랜치로 특정 커밋 이동
+    - ```java
+        // 다른 브랜치의 커밋을 작업 브랜치에 추가
+        git cherry-pick "커밋 해시"
+        ```
+
+<br>
+
+- `git reset`
+    - ```java
+        // 이전 커밋으로 작업 브랜치의 최종 커밋 변경
+        git reset "커밋 해시"
+        ```
+
+<br>
+
+- `git revert`
+    - ```java
+        // 변경 사항을 되돌림
+        git revert "커밋 해시"
+        ```
+
+<br>
+
+- `git rebase`
+    - ```java
+        // 커밋 이력을 재정렬
+        git rebase "커밋 해시"
+        ```
