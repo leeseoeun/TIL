@@ -138,6 +138,7 @@ public class Reply extends BaseEntity {
 
 - @OneToMay
   - ```java
+    /* 예시 코드 */
     @Entity
     public class Board {
 
@@ -155,6 +156,16 @@ public class Reply extends BaseEntity {
         private String content;
     }
     ```
+  - @OneToMany 특징
+    - 상위 엔티티와 하위 엔티티 관리
+      - 상위 엔티티에서 하위 엔티티들을 관리
+      - 상위 엔티티 변경 시 하위 엔티티들도 함께 처리
+    - JPA Repository 생성
+      - 상위 엔티티 기준으로 Repository 생성
+      - 하위 엔티티들의 변경사항도 상위 엔티티에 반영
+    - 'N+1' 문제 주의
+      - 상위 엔티티와 하위 엔티티 여러 개를 조회할 때 발생 가능
+      - 성능 저하 우려, 주의 필요
 
 <br>
 
